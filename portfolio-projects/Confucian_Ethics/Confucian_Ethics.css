@@ -1,0 +1,453 @@
+/* =========================
+   Basic Page Setup
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-attachment: fixed;
+    background-image: url("img.jpeg/img1.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #1f1f1f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* =========================
+   Header
+========================= */
+
+header {
+    background: radial-gradient(circle, #c19a3f 30%, #8b5a2b 80%);
+    border-radius: 8px;
+    color: #111111;
+    margin: 18px auto 0;
+    max-width: 900px;
+    padding: 14px 20px;
+    text-align: center;
+    width: calc(100% - 32px);
+}
+
+header h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin: 0 0 8px;
+}
+
+header p {
+    font-size: 0.82rem;
+    margin: 2px 0;
+}
+
+/* =========================
+   Top Navigation
+========================= */
+
+.top-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 6px auto 0;
+    max-width: 900px;
+    padding: 6px 15px;
+}
+
+.top-menu button {
+    background-color: #fff7e0;
+    border: 1px solid #b22222;
+    border-radius: 20px;
+    color: #b22222;
+    cursor: pointer;
+    font-family: "Great Vibes", cursive;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 7px 12px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.top-menu button:hover,
+.top-menu button:focus-visible {
+    background-color: #ffe9b8;
+    color: #7f1717;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   Main Layout
+========================= */
+
+main {
+    margin: 0 auto 10px;
+    max-width: 900px;
+    padding: 0 20px 10px;
+}
+
+/* =========================
+   Scroll Sections
+========================= */
+
+.scroll-section {
+    margin-bottom: 7px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition:
+        max-height 0.65s ease,
+        transform 0.5s ease,
+        opacity 0.4s ease;
+}
+
+.scroll-section.open {
+    max-height: 5000px;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.scroll-inner {
+    background-color: rgba(255, 250, 240, 0.96);
+    border: 2px solid #8b5a2b;
+    border-radius: 10px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+    padding: 24px;
+}
+
+/* =========================
+   Headings and Text
+========================= */
+
+h2 {
+    color: #b22222;
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+h3 {
+    color: #7f1717;
+    margin: 0 0 8px;
+}
+
+p {
+    margin: 0 0 14px;
+}
+
+blockquote {
+    background-color: #fff7e0;
+    border-left: 5px solid #b22222;
+    font-style: italic;
+    margin: 18px 0;
+    padding: 14px 18px;
+}
+
+cite {
+    font-size: 0.92rem;
+}
+
+a {
+    color: #8b1a1a;
+    overflow-wrap: anywhere;
+}
+
+a:hover {
+    color: #b22222;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.highlight {
+    color: #b22222;
+    font-weight: 700;
+}
+
+/* =========================
+   Lists
+========================= */
+
+.scroll-inner ul {
+    padding-left: 24px;
+}
+
+.scroll-inner li {
+    margin-bottom: 8px;
+}
+
+.reference-list {
+    list-style-position: outside;
+}
+
+.reference-list li {
+    margin-bottom: 18px;
+}
+
+/* =========================
+   Virtue Cards
+========================= */
+
+.virtue-list {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.virtue-card {
+    background-color: #fffaf0;
+    border: 1px solid #d8c8ad;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.toggle-btn {
+    background-color: #b22222;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.92rem;
+    font-weight: 700;
+    padding: 8px 12px;
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.toggle-btn:hover,
+.toggle-btn:focus-visible {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.details {
+    background-color: #fff1d6;
+    border-left: 4px solid #c19a3f;
+    display: none;
+    margin-top: 10px;
+    padding: 10px 12px;
+}
+
+/* =========================
+   Quiz
+========================= */
+
+.quiz-question {
+    background-color: #fffaf0;
+    border: 1px solid #d8c8ad;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.quiz-question label {
+    cursor: pointer;
+    display: block;
+    margin: 8px 0;
+}
+
+.quiz-question input[type="radio"] {
+    margin-right: 7px;
+}
+
+.quiz-feedback {
+    font-weight: 700;
+    margin-top: 8px;
+    min-height: 24px;
+}
+
+.correct {
+    color: #157a2e;
+}
+
+.incorrect {
+    color: #b22222;
+}
+
+#quiz button,
+.celebration-content button,
+.try-again-content button {
+    background-color: #b22222;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 9px 15px;
+}
+
+#quiz button:hover,
+.celebration-content button:hover,
+.try-again-content button:hover {
+    background-color: #8f1b1b;
+}
+
+/* =========================
+   Quiz Overlays
+========================= */
+
+#quiz-celebration,
+#quiz-try-again {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: none;
+    inset: 0;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    z-index: 9999;
+}
+
+.celebration-content,
+.try-again-content {
+    background-color: #fffaf0;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+    max-width: 400px;
+    padding: 24px 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.celebration-content {
+    overflow: hidden;
+    position: relative;
+}
+
+.celebration-content h2 {
+    font-size: 2.4rem;
+}
+
+.celebration-image {
+    margin: 0 auto 12px;
+    max-width: 120px;
+}
+
+.try-again-content {
+    max-width: 330px;
+}
+
+/* =========================
+   Confetti
+========================= */
+
+.confetti {
+    animation: confetti-burst 1.2s ease-out 1;
+    border-radius: 2px;
+    bottom: -5vh;
+    height: 14px;
+    left: var(--x, 50vw);
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    width: 8px;
+}
+
+@keyframes confetti-burst {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(0deg) scale(0.3);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(var(--dx), var(--dy))
+            rotate(540deg)
+            scale(1);
+    }
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    color: #111111;
+    font-size: 0.86rem;
+    font-weight: 700;
+    padding: 8px 15px 16px;
+    text-align: center;
+}
+
+/* =========================
+   Mobile Styles
+========================= */
+
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    header {
+        margin-top: 10px;
+        padding: 10px 12px;
+        width: calc(100% - 20px);
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.74rem;
+    }
+
+    main {
+        padding: 0 10px 10px;
+    }
+
+    .top-menu {
+        gap: 6px;
+        padding: 5px;
+    }
+
+    .top-menu button {
+        font-size: 0.95rem;
+        padding: 5px 9px;
+    }
+
+    .scroll-inner {
+        padding: 16px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .virtue-card,
+    .quiz-question {
+        padding: 12px;
+    }
+
+    .celebration-content,
+    .try-again-content {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BG3 Builds</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+
+  <section class="banner">
+    <img src="banner.png" alt="Fantasy character banner">
+  </section>
+
+  <header class="topbar">
+    <div class="logo-wrap">
+      <img class="logo" src="logo.jpeg" alt="BG3 Builds Logo">
+      <div class="logo-text">
+        <h2>BG3 Builds</h2>
+        <p>Tiered builds, flipping cards, fewer regrets</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="builds.html">Builds</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="page-layout">
+
+      <aside class="side-menu">
+        <h3>Sections</h3>
+        <button class="menu-btn" data-target="buildsSection" type="button">Build Library</button>
+        <button class="menu-btn" data-target="favoritesSection" type="button">Favorites</button>
+        <button class="menu-btn" data-target="submitSection" type="button">Submit</button>
+      </aside>
+
+      <div>
+
+        <section id="buildsSection" class="content-section section-box active">
+          <h3 class="section-title">Build Library</h3>
+
+          <div class="filter-row">
+            <input id="buildFilter" type="text" placeholder="Search builds... (ex: monk, stealth, smite, control)">
+
+            <select id="roleFilter">
+              <option value="">Filter by Role (All)</option>
+              <option value="dps">DPS</option>
+              <option value="tank">Tank</option>
+              <option value="support">Support</option>
+              <option value="control">Control</option>
+            </select>
+
+            <select id="tierFilter">
+              <option value="">Filter by Tier (All)</option>
+              <option value="s">S-Tier</option>
+              <option value="a">A-Tier</option>
+              <option value="b">B-Tier</option>
+            </select>
+
+            <button class="btn" type="button" id="clearFilterBtn">Clear</button>
+          </div>
+
+          <!-- S TIER -->
+          <div class="tier-heading s">
+            <h3 style="margin:0;">S-Tier Builds</h3>
+            <p class="tier-subtext">The “this feels illegal” section.</p>
+          </div>
+
+          <div class="cards" id="tierS">
+
+            <article class="build-card flip-card" data-tier="S" data-role="dps"
+              data-search="sorlock sorcerer warlock eldritch blast quickened burst control charisma">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge s">S-Tier</div>
+                  <h4>Sorlock ★</h4>
+                  <p class="card-copy">Quickened Spell + Eldritch Blast pressure with spicy burst turns. Basically magical harassment with a degree.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 40/50 | <strong>Role:</strong> DPS/Control</p>
+                  <div class="tags"><span>#burst</span><span>#eldritch</span><span>#control</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Sorlock ★">Favorite</button>
+                  </div>
+                </div>
+
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Sorlock</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Sorcerer + 2 Warlock for Agonizing Blast.</li>
+                    <li><strong>Stats:</strong> CHA first, then CON.</li>
+                    <li><strong>Key:</strong> Quickened Spell to cast twice in one turn.</li>
+                    <li><strong>Gameplan:</strong> Control early, then burst when the boss blinks.</li>
+                    <li><strong>Quip:</strong> “Eldritch Blast again” is not a bug. It is the lifestyle.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Sorlock ★">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="S" data-role="dps"
+              data-search="lockadin warlock paladin divine smite burst charisma oath vengeance short rest">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge s">S-Tier</div>
+                  <h4>Lockadin</h4>
+                  <p class="card-copy">Short-rest slots fueling absurd smite damage. Holy violence with a rechargeable battery pack.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 35/50 | <strong>Role:</strong> DPS</p>
+                  <div class="tags"><span>#smite</span><span>#burst</span><span>#paladin</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Lockadin">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Lockadin</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Paladin for Extra Attack + Warlock slots.</li>
+                    <li><strong>Stats:</strong> CHA + STR.</li>
+                    <li><strong>Key:</strong> Smite priority targets, short rest, repeat.</li>
+                    <li><strong>Tip:</strong> Holy damage dispenser mode activated.</li>
+                    <li><strong>Quip:</strong> Subtlety was smote several levels ago.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Lockadin">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="S" data-role="dps"
+              data-search="gloomstalker assassin ranger rogue stealth alpha strike surprise crit initiative">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge s">S-Tier</div>
+                  <h4>Gloomstalker Assassin</h4>
+                  <p class="card-copy">Round-one deletion service. Receipts available. The enemy’s first mistake was loading into combat.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 30/50 | <strong>Role:</strong> DPS</p>
+                  <div class="tags"><span>#stealth</span><span>#alpha</span><span>#crit</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Gloomstalker Assassin">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Gloomstalker Assassin</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Ranger + Rogue.</li>
+                    <li><strong>Stats:</strong> DEX first.</li>
+                    <li><strong>Opener:</strong> Start from stealth.</li>
+                    <li><strong>Goal:</strong> Remove threats before they act.</li>
+                    <li><strong>Quip:</strong> If they saw you, the performance review went poorly.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Gloomstalker Assassin">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="S" data-role="tank"
+              data-search="paladin tank ancients fighter armor shield defensive frontline durable survivability">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge s">S-Tier</div>
+                  <h4>Paladin Tank</h4>
+                  <p class="card-copy">Heavy armor, shield, sustain, and enough smugness to stand in every doorway.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 20/50 | <strong>Role:</strong> Tank</p>
+                  <div class="tags"><span>#frontline</span><span>#shield</span><span>#survive</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Paladin Tank">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Paladin Tank</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Paladin with defensive gear and healing support tools.</li>
+                    <li><strong>Stats:</strong> STR, CHA, then CON.</li>
+                    <li><strong>Key:</strong> Hold choke points and punish anything approaching your party.</li>
+                    <li><strong>Tip:</strong> This build treats enemy turns like a personal inconvenience.</li>
+                    <li><strong>Quip:</strong> Doorframe? Mine. Battlefield? Also mine.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Paladin Tank">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="S" data-role="control"
+              data-search="wizard evocation fireball magic missile control area spells caster intelligence">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge s">S-Tier</div>
+                  <h4>Evocation Nuker</h4>
+                  <p class="card-copy">Big spells, safe ally placement, and enough fire to turn a bad plan into a crispy success.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 25/50 | <strong>Role:</strong> Control</p>
+                  <div class="tags"><span>#fireball</span><span>#wizard</span><span>#aoe</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Evocation Nuker">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Evocation Nuker</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Wizard with strong AoE and battlefield shaping.</li>
+                    <li><strong>Stats:</strong> INT first.</li>
+                    <li><strong>Key:</strong> Use positioning and spells to control crowd movement.</li>
+                    <li><strong>Tip:</strong> Fireball is not always the answer. It is just often suspiciously close.</li>
+                    <li><strong>Quip:</strong> Some problems need nuance. These enemies need evaporation.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Evocation Nuker">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="S" data-role="support"
+              data-search="life cleric healer support bless sanctuary revive healing sustain wisdom">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge s">S-Tier</div>
+                  <h4>Life Cleric</h4>
+                  <p class="card-copy">The party’s insurance policy. Keeps everyone alive despite their best efforts.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 15/50 | <strong>Role:</strong> Support</p>
+                  <div class="tags"><span>#healing</span><span>#bless</span><span>#revive</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Life Cleric">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Life Cleric</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Cleric with healing boosts and classic support spells.</li>
+                    <li><strong>Stats:</strong> WIS then CON.</li>
+                    <li><strong>Key:</strong> Use Bless early, heal efficiently, and keep someone upright at all times.</li>
+                    <li><strong>Tip:</strong> You are the glue. Everyone else is the glitter disaster.</li>
+                    <li><strong>Quip:</strong> Carries the team and the emotional damage.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Life Cleric">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="S" data-role="dps"
+              data-search="open hand monk tavern brawler punches mobility stun martial arts strength dexterity">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge s">S-Tier</div>
+                  <h4>Tavern Brawler Monk</h4>
+                  <p class="card-copy">Speed, pressure, and enough hand-delivered disrespect to fold a battlefield in half.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 30/50 | <strong>Role:</strong> DPS</p>
+                  <div class="tags"><span>#monk</span><span>#stun</span><span>#mobility</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Tavern Brawler Monk">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Tavern Brawler Monk</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Open Hand Monk with gear that boosts unarmed pressure.</li>
+                    <li><strong>Stats:</strong> DEX or STR path depending on setup.</li>
+                    <li><strong>Key:</strong> Lock down targets and keep moving.</li>
+                    <li><strong>Tip:</strong> Your fists are now the main character.</li>
+                    <li><strong>Quip:</strong> Diplomacy ended the second initiative rolled.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Tavern Brawler Monk">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="S" data-role="control"
+              data-search="swords bard support control flourish melee utility charisma crowd control">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge s">S-Tier</div>
+                  <h4>Swords Bard Control</h4>
+                  <p class="card-copy">Stylish battlefield nonsense with utility, crowd control, and a dramatic cape somewhere in the equation.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 35/50 | <strong>Role:</strong> Control</p>
+                  <div class="tags"><span>#bard</span><span>#utility</span><span>#charisma</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Swords Bard Control">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Swords Bard Control</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Bard with control spells and flourish utility.</li>
+                    <li><strong>Stats:</strong> CHA then DEX.</li>
+                    <li><strong>Key:</strong> Disable enemies while still contributing damage and support.</li>
+                    <li><strong>Tip:</strong> This build wins and makes it look rehearsed.</li>
+                    <li><strong>Quip:</strong> Weaponized theater kid energy.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Swords Bard Control">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="S" data-role="tank"
+              data-search="moon druid bear tank wild shape hp frontline wisdom sustain">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge s">S-Tier</div>
+                  <h4>Moon Druid Wall</h4>
+                  <p class="card-copy">Soaks damage by becoming an angry wildlife documentary with extra hit points.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 20/50 | <strong>Role:</strong> Tank</p>
+                  <div class="tags"><span>#wildshape</span><span>#bear</span><span>#durable</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Moon Druid Wall">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Moon Druid Wall</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Circle of the Moon for strong Wild Shape forms.</li>
+                    <li><strong>Stats:</strong> WIS and CON.</li>
+                    <li><strong>Key:</strong> Shift early and absorb pressure for the team.</li>
+                    <li><strong>Tip:</strong> Your armor class is now “bear.”</li>
+                    <li><strong>Quip:</strong> Why wear armor when you can become the armor.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Moon Druid Wall">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="S" data-role="support"
+              data-search="light cleric radiant support damage heal utility bless control wisdom">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge s">S-Tier</div>
+                  <h4>Radiant Mom Friend</h4>
+                  <p class="card-copy">Heals, blasts, and keeps the party functional like a radiant-powered group project manager.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 20/50 | <strong>Role:</strong> Support</p>
+                  <div class="tags"><span>#radiant</span><span>#heal</span><span>#utility</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Radiant Mom Friend">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Radiant Mom Friend</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Cleric support shell with strong radiant options.</li>
+                    <li><strong>Stats:</strong> WIS then CON.</li>
+                    <li><strong>Key:</strong> Balance healing, buffs, and punishing undead or clustered enemies.</li>
+                    <li><strong>Tip:</strong> You can absolutely support and still be the scariest person in the room.</li>
+                    <li><strong>Quip:</strong> Brings snacks, healing, and consequences.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Radiant Mom Friend">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- A TIER -->
+          <div class="tier-heading a">
+            <h3 style="margin:0;">A-Tier Builds</h3>
+            <p class="tier-subtext">Still terrifying. Just a little less courtroom evidence.</p>
+          </div>
+
+          <div class="cards" id="tierA">
+
+            <article class="build-card flip-card" data-tier="A" data-role="dps"
+              data-search="fighter champion great weapon melee crit strength action surge dps">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge a">A-Tier</div>
+                  <h4>Champion Bonk Engine</h4>
+                  <p class="card-copy">Simple, brutal, and deeply committed to solving everything with the same large object.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 15/50 | <strong>Role:</strong> DPS</p>
+                  <div class="tags"><span>#fighter</span><span>#bonk</span><span>#crit</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Champion Bonk Engine">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Champion Bonk Engine</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Fighter with Great Weapon playstyle.</li>
+                    <li><strong>Stats:</strong> STR then CON.</li>
+                    <li><strong>Key:</strong> Focus on consistent melee pressure.</li>
+                    <li><strong>Tip:</strong> Extremely low-maintenance. Extremely high impact.</li>
+                    <li><strong>Quip:</strong> Not elegant. Not sorry.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Champion Bonk Engine">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="A" data-role="control"
+              data-search="storm sorcerer tempest cleric lightning thunder control caster wet combo">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge a">A-Tier</div>
+                  <h4>Stormcaller</h4>
+                  <p class="card-copy">Wet enemies, lightning damage, and enough thunder to file a neighborhood complaint.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 35/50 | <strong>Role:</strong> Control</p>
+                  <div class="tags"><span>#lightning</span><span>#thunder</span><span>#storm</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Stormcaller">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Stormcaller</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Tempest or storm-themed caster setup.</li>
+                    <li><strong>Stats:</strong> CHA or WIS depending on version.</li>
+                    <li><strong>Key:</strong> Use terrain and elemental setup for stronger spell impact.</li>
+                    <li><strong>Tip:</strong> Puddles are now business opportunities.</li>
+                    <li><strong>Quip:</strong> Local forecast: tactical screaming.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Stormcaller">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="A" data-role="support"
+              data-search="lore bard support skills crowd control cutting words healing charisma">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge a">A-Tier</div>
+                  <h4>Lore Bard</h4>
+                  <p class="card-copy">Support, utility, crowd control, and enough sarcasm to debuff morale in real life.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 25/50 | <strong>Role:</strong> Support</p>
+                  <div class="tags"><span>#bard</span><span>#skills</span><span>#support</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Lore Bard">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Lore Bard</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Control and utility casting with support tools.</li>
+                    <li><strong>Stats:</strong> CHA first.</li>
+                    <li><strong>Key:</strong> Keep allies buffed and enemies embarrassed.</li>
+                    <li><strong>Tip:</strong> Great for players who enjoy doing a little bit of everything well.</li>
+                    <li><strong>Quip:</strong> The build equivalent of “actually, I have a spell for that.”</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Lore Bard">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="A" data-role="tank"
+              data-search="eldritch knight fighter tank shield magic armor defense utility">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge a">A-Tier</div>
+                  <h4>Eldritch Knight Brick</h4>
+                  <p class="card-copy">A helmet full of stubbornness and just enough magic to become everyone’s least favorite obstacle.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 25/50 | <strong>Role:</strong> Tank</p>
+                  <div class="tags"><span>#fighter</span><span>#tank</span><span>#utility</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Eldritch Knight Brick">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Eldritch Knight Brick</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Defensive fighter with utility spell options.</li>
+                    <li><strong>Stats:</strong> STR and CON.</li>
+                    <li><strong>Key:</strong> Stay glued to the frontline and use spells for protection or control.</li>
+                    <li><strong>Tip:</strong> Reliable and hard to remove.</li>
+                    <li><strong>Quip:</strong> Enemy AI sees armor and starts making life choices.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Eldritch Knight Brick">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="A" data-role="dps"
+              data-search="berserker barbarian throwing tavern brawler enraged strength dps">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge a">A-Tier</div>
+                  <h4>Throwzerker</h4>
+                  <p class="card-copy">Turns random objects into ballistic opinions. Furniture is now ammunition.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 20/50 | <strong>Role:</strong> DPS</p>
+                  <div class="tags"><span>#throw</span><span>#barbarian</span><span>#rage</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Throwzerker">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Throwzerker</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Barbarian built for thrown weapon and improvised object damage.</li>
+                    <li><strong>Stats:</strong> STR first.</li>
+                    <li><strong>Key:</strong> Rage and start launching the room.</li>
+                    <li><strong>Tip:</strong> If it is not nailed down, it has career potential.</li>
+                    <li><strong>Quip:</strong> Interior design becomes exterior design instantly.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Throwzerker">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="A" data-role="control"
+              data-search="abjuration wizard ward protection control utility intelligence shields">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge a">A-Tier</div>
+                  <h4>Abjuration Bubble Wrap</h4>
+                  <p class="card-copy">Protective magic so thick the enemy has to schedule a meeting first.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 30/50 | <strong>Role:</strong> Control</p>
+                  <div class="tags"><span>#ward</span><span>#wizard</span><span>#defense</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Abjuration Bubble Wrap">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Abjuration Bubble Wrap</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Wizard with Arcane Ward focus.</li>
+                    <li><strong>Stats:</strong> INT then CON.</li>
+                    <li><strong>Key:</strong> Build protective layers while controlling enemy movement.</li>
+                    <li><strong>Tip:</strong> Great for players who enjoy saying “actually no” to damage.</li>
+                    <li><strong>Quip:</strong> Less glass cannon, more insured cannon.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Abjuration Bubble Wrap">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="A" data-role="support"
+              data-search="land druid support healing summons terrain control wisdom utility">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge a">A-Tier</div>
+                  <h4>Nature HR</h4>
+                  <p class="card-copy">Support, terrain control, and a leafy commitment to keeping the team from becoming soup.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 25/50 | <strong>Role:</strong> Support</p>
+                  <div class="tags"><span>#druid</span><span>#healing</span><span>#terrain</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Nature HR">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Nature HR</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Land Druid with support and area control focus.</li>
+                    <li><strong>Stats:</strong> WIS then CON.</li>
+                    <li><strong>Key:</strong> Use battlefield effects to make enemy movement painful.</li>
+                    <li><strong>Tip:</strong> The floor can be a teammate if you believe in it.</li>
+                    <li><strong>Quip:</strong> Passive-aggressive gardening, now tactical.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Nature HR">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="A" data-role="dps"
+              data-search="rogue thief dual crossbow dexterity hand crossbow bonus action dps">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge a">A-Tier</div>
+                  <h4>Dual Crossbow Gremlin</h4>
+                  <p class="card-copy">Small bolts, large attitude, and bonus actions with absolutely no adult supervision.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 25/50 | <strong>Role:</strong> DPS</p>
+                  <div class="tags"><span>#crossbow</span><span>#rogue</span><span>#dex</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Dual Crossbow Gremlin">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Dual Crossbow Gremlin</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Thief Rogue or similar ranged multi-hit setup.</li>
+                    <li><strong>Stats:</strong> DEX first.</li>
+                    <li><strong>Key:</strong> Abuse positioning and extra actions for repeated chip damage.</li>
+                    <li><strong>Tip:</strong> Strong, mobile, and delightfully annoying.</li>
+                    <li><strong>Quip:</strong> The battlefield equivalent of being pecked to death by paperwork.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Dual Crossbow Gremlin">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="A" data-role="tank"
+              data-search="barbarian wildheart tank resistance frontline survivability animal heart">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge a">A-Tier</div>
+                  <h4>Wildheart Meat Shield</h4>
+                  <p class="card-copy">Resists damage, hogs attention, and runs straight into danger like it owes you money.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 15/50 | <strong>Role:</strong> Tank</p>
+                  <div class="tags"><span>#barbarian</span><span>#resist</span><span>#frontline</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Wildheart Meat Shield">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Wildheart Meat Shield</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Barbarian with defensive rage utility.</li>
+                    <li><strong>Stats:</strong> STR and CON.</li>
+                    <li><strong>Key:</strong> Stay in the center of the mess and soak aggression.</li>
+                    <li><strong>Tip:</strong> You are not the problem solver. You are the problem absorber.</li>
+                    <li><strong>Quip:</strong> Subtle as a kicked tavern door.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Wildheart Meat Shield">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="A" data-role="control"
+              data-search="warlock fiend hunger of hadar fear control eldritch caster charisma">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge a">A-Tier</div>
+                  <h4>Fiend Controller</h4>
+                  <p class="card-copy">Area denial, fear effects, and a deeply unhealthy relationship with eldritch geometry.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 30/50 | <strong>Role:</strong> Control</p>
+                  <div class="tags"><span>#warlock</span><span>#fear</span><span>#hunger</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Fiend Controller">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Fiend Controller</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Warlock with battlefield disruption tools.</li>
+                    <li><strong>Stats:</strong> CHA first.</li>
+                    <li><strong>Key:</strong> Limit movement, punish clumps, and pick at survivors.</li>
+                    <li><strong>Tip:</strong> The best control spell is often “stand over there and suffer.”</li>
+                    <li><strong>Quip:</strong> Creates zones the enemy files under “absolutely not.”</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Fiend Controller">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- B TIER -->
+          <div class="tier-heading b">
+            <h3 style="margin:0;">B-Tier Builds</h3>
+            <p class="tier-subtext">Still fun. Still strong. Slightly more chaos-per-result ratio.</p>
+          </div>
+
+          <div class="cards" id="tierB">
+
+            <article class="build-card flip-card" data-tier="B" data-role="support"
+              data-search="beast master ranger support pet summon companion utility dexterity">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge b">B-Tier</div>
+                  <h4>Beast Master Bestie</h4>
+                  <p class="card-copy">You and your emotional support murder-animal take on the world together.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 20/50 | <strong>Role:</strong> Support</p>
+                  <div class="tags"><span>#pet</span><span>#ranger</span><span>#utility</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Beast Master Bestie">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Beast Master Bestie</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Ranger using companion support and ranged pressure.</li>
+                    <li><strong>Stats:</strong> DEX first.</li>
+                    <li><strong>Key:</strong> Let the pet disrupt while you provide steady damage.</li>
+                    <li><strong>Tip:</strong> Not the strongest build, but the vibes are excellent.</li>
+                    <li><strong>Quip:</strong> Half strategy, half “get them, buddy!”</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Beast Master Bestie">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="B" data-role="dps"
+              data-search="wild magic sorcerer chaos dps spellcaster randomness charisma">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge b">B-Tier</div>
+                  <h4>Chaos Caster</h4>
+                  <p class="card-copy">Sometimes incredible. Sometimes confusing. Always one wrong sneeze away from a story.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 30/50 | <strong>Role:</strong> DPS</p>
+                  <div class="tags"><span>#wildmagic</span><span>#chaos</span><span>#caster</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Chaos Caster">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Chaos Caster</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Wild Magic Sorcerer focused on spell pressure.</li>
+                    <li><strong>Stats:</strong> CHA first.</li>
+                    <li><strong>Key:</strong> Lean into burst and accept the occasional nonsense.</li>
+                    <li><strong>Tip:</strong> This build is best piloted by someone emotionally prepared for surprises.</li>
+                    <li><strong>Quip:</strong> Tactical planning, with seasoning.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Chaos Caster">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="B" data-role="tank"
+              data-search="spore druid tank summons temp hp fungal frontline wisdom">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge b">B-Tier</div>
+                  <h4>Spore Fortress</h4>
+                  <p class="card-copy">Fungus-powered durability with the energy of a haunted greenhouse.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 30/50 | <strong>Role:</strong> Tank</p>
+                  <div class="tags"><span>#spores</span><span>#tempHP</span><span>#summons</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Spore Fortress">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Spore Fortress</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Circle of Spores for survivability and weird little bonuses.</li>
+                    <li><strong>Stats:</strong> WIS and CON.</li>
+                    <li><strong>Key:</strong> Stay close enough to pressure, but safe enough to endure.</li>
+                    <li><strong>Tip:</strong> This one is for players who enjoy strange, sturdy builds.</li>
+                    <li><strong>Quip:</strong> Mold, but make it confrontational.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Spore Fortress">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="B" data-role="control"
+              data-search="illusion wizard trickery deception control distractions utility intelligence">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge b">B-Tier</div>
+                  <h4>Illusion Menace</h4>
+                  <p class="card-copy">Not always the most efficient, but definitely the most likely to make the fight weird.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 35/50 | <strong>Role:</strong> Control</p>
+                  <div class="tags"><span>#illusion</span><span>#trickery</span><span>#utility</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Illusion Menace">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Illusion Menace</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Wizard focused on deception and battlefield disruption.</li>
+                    <li><strong>Stats:</strong> INT first.</li>
+                    <li><strong>Key:</strong> Control attention and create opportunities with clever spell use.</li>
+                    <li><strong>Tip:</strong> Stronger in creative hands than on paper.</li>
+                    <li><strong>Quip:</strong> Turns every encounter into interpretive theater.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Illusion Menace">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="B" data-role="support"
+              data-search="knowledge cleric utility support dialogue skill wisdom buffs">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge b">B-Tier</div>
+                  <h4>Walking Encyclopedia</h4>
+                  <p class="card-copy">Support for players who enjoy solving problems with facts, buffs, and a mildly judgmental stare.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 20/50 | <strong>Role:</strong> Support</p>
+                  <div class="tags"><span>#knowledge</span><span>#utility</span><span>#skills</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Walking Encyclopedia">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Walking Encyclopedia</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Cleric with utility-heavy spell and skill value.</li>
+                    <li><strong>Stats:</strong> WIS first.</li>
+                    <li><strong>Key:</strong> Support your team outside combat and steady them during it.</li>
+                    <li><strong>Tip:</strong> Great when you want usefulness in every conversation and fight.</li>
+                    <li><strong>Quip:</strong> Weaponized homework.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Walking Encyclopedia">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="B" data-role="dps"
+              data-search="arcane trickster rogue dps utility stealth spells dexterity control">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge b">B-Tier</div>
+                  <h4>Arcane Trickster</h4>
+                  <p class="card-copy">Sneaky, slippery, and constantly one spell away from making your DM-equivalent sigh.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 30/50 | <strong>Role:</strong> DPS</p>
+                  <div class="tags"><span>#rogue</span><span>#magic</span><span>#stealth</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Arcane Trickster">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Arcane Trickster</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Rogue with utility spell support.</li>
+                    <li><strong>Stats:</strong> DEX first.</li>
+                    <li><strong>Key:</strong> Mix stealth, positioning, and control tricks.</li>
+                    <li><strong>Tip:</strong> Less raw damage than other rogue paths, more chaos options.</li>
+                    <li><strong>Quip:</strong> A pickpocket with spell slots is society’s problem now.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Arcane Trickster">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="B" data-role="tank"
+              data-search="fighter defense sword board tank champion battle master shield defense">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge b">B-Tier</div>
+                  <h4>Sword-and-Board Uncle</h4>
+                  <p class="card-copy">Dependable, practical, and built like someone who carries emergency tools in the trunk.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 10/50 | <strong>Role:</strong> Tank</p>
+                  <div class="tags"><span>#shield</span><span>#fighter</span><span>#reliable</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Sword-and-Board Uncle">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Sword-and-Board Uncle</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Straightforward fighter using shield defense.</li>
+                    <li><strong>Stats:</strong> STR and CON.</li>
+                    <li><strong>Key:</strong> Anchor the front and protect squishier allies.</li>
+                    <li><strong>Tip:</strong> Not flashy, but very stable.</li>
+                    <li><strong>Quip:</strong> Brings sensible shoes to the apocalypse.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Sword-and-Board Uncle">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="B" data-role="control"
+              data-search="enchantment wizard hold person charm confusion control intelligence">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge b">B-Tier</div>
+                  <h4>Enchantment Office Manager</h4>
+                  <p class="card-copy">Moves enemies around emotionally until they forget what their turn was about.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 30/50 | <strong>Role:</strong> Control</p>
+                  <div class="tags"><span>#enchant</span><span>#disable</span><span>#wizard</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Enchantment Office Manager">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Enchantment Office Manager</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Wizard centered on disabling key targets.</li>
+                    <li><strong>Stats:</strong> INT first.</li>
+                    <li><strong>Key:</strong> Deny actions and swing momentum through control effects.</li>
+                    <li><strong>Tip:</strong> Wonderful when you enjoy making enemy turns unproductive.</li>
+                    <li><strong>Quip:</strong> Every fight becomes a mandatory compliance training.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Enchantment Office Manager">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="B" data-role="support"
+              data-search="valor bard support hybrid melee buffs inspiration charisma">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge b">B-Tier</div>
+                  <h4>Hype Captain</h4>
+                  <p class="card-copy">Part support, part melee, all confidence. The build equivalent of yelling “you got this” with a sword.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 20/50 | <strong>Role:</strong> Support</p>
+                  <div class="tags"><span>#valor</span><span>#inspiration</span><span>#hybrid</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Hype Captain">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Hype Captain</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Bard with melee-friendly support style.</li>
+                    <li><strong>Stats:</strong> CHA then DEX.</li>
+                    <li><strong>Key:</strong> Stay near the action and keep buffs flowing.</li>
+                    <li><strong>Tip:</strong> Great if you want support without standing in the parking lot.</li>
+                    <li><strong>Quip:</strong> Motivational speaking, but stabby.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Hype Captain">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card flip-card" data-tier="B" data-role="dps"
+              data-search="hunter ranger ranged dps volley archery dexterity sustained damage">
+              <div class="flip-inner">
+                <div class="flip-face flip-front">
+                  <div class="tier-badge b">B-Tier</div>
+                  <h4>Volley Enjoyer</h4>
+                  <p class="card-copy">Consistent ranged damage for players who appreciate arrows and personal boundaries.</p>
+                  <p class="rating"><strong>Difficulty:</strong> 15/50 | <strong>Role:</strong> DPS</p>
+                  <div class="tags"><span>#archery</span><span>#ranger</span><span>#ranged</span></div>
+                  <div class="card-actions">
+                    <button class="btn explore-btn" type="button">Explore Build</button>
+                    <button class="btn fav-build-btn" type="button" data-fav="Volley Enjoyer">Favorite</button>
+                  </div>
+                </div>
+                <div class="flip-face flip-back">
+                  <h4>How to Build: Volley Enjoyer</h4>
+                  <ul class="build-steps">
+                    <li><strong>Core:</strong> Ranger focused on steady ranged output.</li>
+                    <li><strong>Stats:</strong> DEX first.</li>
+                    <li><strong>Key:</strong> Keep distance, maintain high ground, and punish clusters.</li>
+                    <li><strong>Tip:</strong> Reliable and easy to slot into most parties.</li>
+                    <li><strong>Quip:</strong> Introvert-friendly combat.</li>
+                  </ul>
+                  <div class="back-actions">
+                    <button class="btn back-btn" type="button">Back</button>
+                    <button class="btn fav-from-card" type="button" data-fav="Volley Enjoyer">Add to Favorites</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="panel" style="margin-top:16px;">
+            <h3 style="margin:0;">Filtering Tips</h3>
+            <ul style="line-height:1.8; padding-left:18px; margin: 10px 0 0 0;">
+              <li><strong>Search:</strong> Try keywords like “smite”, “stealth”, “fireball”, “summons”, or “healing”.</li>
+              <li><strong>Role:</strong> Use the dropdown to show only DPS, Tank, Support, or Control builds.</li>
+              <li><strong>Flip:</strong> Click “Explore Build” to see the how-to steps.</li>
+              <li><strong>Favorite:</strong> Click “Favorite” to save the build to your Favorites section.</li>
+              <li><strong>Total Builds:</strong> This page now includes 30 build cards across S, A, and B tiers.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- FAVORITES -->
+        <section id="favoritesSection" class="content-section section-box">
+          <h3 class="section-title">Favorites</h3>
+
+          <div class="section-actions">
+            <button class="btn" type="button" id="clearFavoritesBtn">Clear Favorites</button>
+          </div>
+
+          <div class="favorites-grid" id="favoritesGrid"></div>
+        </section>
+
+        <!-- SUBMIT -->
+        <section id="submitSection" class="content-section section-box">
+          <h3 class="section-title">Submit Your Build</h3>
+
+          <div class="submit-shell">
+            <aside class="submit-intro">
+              <h4>Build Workshop</h4>
+              <p>
+                Save your own build ideas to local storage so they stick around after refresh.
+              </p>
+              <p>
+                Add your character, class, race, difficulty, and notes. Every saved build appears below as a flip card.
+              </p>
+            </aside>
+
+            <div class="submit-form-card">
+              <form id="buildForm">
+                <div class="form-grid">
+
+                  <div>
+                    <label for="submitterName">Your Name</label>
+                    <input type="text" id="submitterName" required placeholder="Ex: Brooke Kelly">
+                  </div>
+
+                  <div>
+                    <label for="characterName">Character Name</label>
+                    <input type="text" id="characterName" required placeholder="Ex: Tav">
+                  </div>
+
+                  <div class="full">
+                    <label for="buildName">Build Name</label>
+                    <input type="text" id="buildName" required placeholder="Ex: Lockadin Burst Smite">
+                  </div>
+
+                  <div>
+                    <label for="mainClass">Main Class & Subclass</label>
+                    <select id="mainClass" required>
+                      <option value="">Choose class & subclass...</option>
+                      <option>Barbarian - Berserker</option>
+                      <option>Bard - College of Lore</option>
+                      <option>Cleric - Tempest</option>
+                      <option>Druid - Circle of Spores</option>
+                      <option>Fighter - Champion</option>
+                      <option>Monk - Way of Shadow</option>
+                      <option>Paladin - Oath of Devotion</option>
+                      <option>Ranger - Gloom Stalker</option>
+                      <option>Rogue - Assassin</option>
+                      <option>Sorcerer - Draconic Bloodline</option>
+                      <option>Warlock - The Fiend</option>
+                      <option>Wizard - Abjuration</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="race">Race</label>
+                    <select id="race" required>
+                      <option value="">Choose race...</option>
+                      <option>Human</option>
+                      <option>Elf</option>
+                      <option>Drow</option>
+                      <option>Half-Elf</option>
+                      <option>Half-Orc</option>
+                      <option>Halfling</option>
+                      <option>Dwarf</option>
+                      <option>Gnome</option>
+                      <option>Tiefling</option>
+                      <option>Githyanki</option>
+                      <option>Dragonborn</option>
+                    </select>
+                  </div>
+
+                  <div class="full">
+                    <label for="difficulty">Difficulty</label>
+                    <div class="range-wrap">
+                      <div class="range-header">
+                        <span>Difficulty (10 to 50)</span>
+                        <span class="range-value" id="difficultyValue">30/50</span>
+                      </div>
+
+                      <input type="range" id="difficulty" min="10" max="50" value="30" step="5">
+
+                      <div class="range-numbers">
+                        <span>10</span>
+                        <span>15</span>
+                        <span>20</span>
+                        <span>25</span>
+                        <span>30</span>
+                        <span>35</span>
+                        <span>40</span>
+                        <span>45</span>
+                        <span>50</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="full">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" placeholder="Key spells, gear ideas, leveling notes..."></textarea>
+                  </div>
+
+                  <div>
+                    <button class="btn" type="submit">Save Build</button>
+                  </div>
+
+                  <div>
+                    <button class="btn" type="button" id="clearSavedBtn">Clear Saved</button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <h3 style="margin-top:22px;">Saved Builds</h3>
+          <div class="saved-grid" id="savedBuildsGrid"></div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="builds.html">Builds</a>
+      <a href="about.html">About</a>
+    </nav>
+    <p class="copyright">&copy; 2026 Brooke Kelly</p>
+  </footer>
+
+</body>
+</html>

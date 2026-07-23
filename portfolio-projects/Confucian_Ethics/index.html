@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="An interactive website explaining Ren and other key concepts in Confucian ethics."
+    >
+
+    <title>Confucian Ethics: Ren</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="Confucian_Ethics.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            Module 04 Written Assignment: Key Concepts of Confucian Ethics
+        </h1>
+
+        <p>Brooke Kelly</p>
+        <p>Rasmussen University</p>
+        <p>Danielle Lynch</p>
+        <p>December 7, 2025</p>
+    </header>
+
+    <nav class="top-menu" aria-label="Main navigation">
+        <button type="button" data-target="intro">
+            What Is Ren?
+        </button>
+
+        <button type="button" data-target="ren">
+            Ren as Central Virtue
+        </button>
+
+        <button type="button" data-target="virtues">
+            Other Virtues
+        </button>
+
+        <button type="button" data-target="apply">
+            Everyday Life
+        </button>
+
+        <button type="button" data-target="references">
+            References
+        </button>
+
+        <button type="button" data-target="quiz">
+            Quick Quiz
+        </button>
+    </nav>
+
+    <main>
+
+        <!-- Section 1 -->
+        <section id="intro" class="scroll-section open">
+            <div class="scroll-inner">
+
+                <h2>What Is Ren?</h2>
+
+                <p>
+                    Ren is a big idea in Confucian ethics, but it is actually
+                    pretty simple once you break it down. It basically means
+                    treating people with real kindness and trying to understand
+                    where they are coming from. When Confucius talked about Ren,
+                    he was talking about having a good heart and caring about
+                    how your actions affect other people. It is the kind of
+                    compassion shown through everyday moments, such as being
+                    patient, listening, or choosing not to snap at someone when
+                    you are frustrated.
+                </p>
+
+                <p>
+                    Confucius saw Ren as the starting point for all the other
+                    virtues. If a person has genuine compassion, then qualities
+                    such as respect, honesty, and fairness come more naturally.
+                    Ren helps people get along and build stronger relationships.
+                    To me, it means slowing down and remembering that other
+                    people have feelings too, then choosing to act in a way that
+                    improves life for those around you.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="ren" class="scroll-section">
+            <div class="scroll-inner">
+
+                <h2>Ren as the Central Virtue</h2>
+
+                <p>
+                    Confucius believed a good person consistently cares for
+                    others and tries to see situations from another person's
+                    perspective.
+                </p>
+
+                <blockquote>
+                    “Do not do to others what you would not want done to
+                    yourself.”
+                </blockquote>
+
+                <p>
+                    <cite>Confucius, The Analects, 15:23</cite>
+                </p>
+
+                <p>
+                    Ren shapes how people practice other virtues such as
+                    <strong>Li</strong>, proper conduct;
+                    <strong>Xiao</strong>, filial piety;
+                    <strong>Yi</strong>, righteousness; and
+                    <strong>Shu</strong>, empathy or reciprocity.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="virtues" class="scroll-section">
+            <div class="scroll-inner">
+
+                <h2>Other Key Concepts in Confucian Ethics</h2>
+
+                <p>
+                    Click each button to see how the virtue connects to Ren.
+                </p>
+
+                <div class="virtue-list">
+
+                    <article class="virtue-card">
+                        <h3>Li: Proper Conduct</h3>
+
+                        <p>
+                            Respectful and appropriate behavior in each
+                            situation.
+                        </p>
+
+                        <button
+                            class="toggle-btn"
+                            type="button"
+                            onclick="toggleDetails('li-details')"
+                        >
+                            Show how this relates to Ren
+                        </button>
+
+                        <p id="li-details" class="details">
+                            Without Ren, Li can become empty politeness. With
+                            Ren, rituals become meaningful expressions of care.
+                        </p>
+                    </article>
+
+                    <article class="virtue-card">
+                        <h3>Xiao: Filial Piety</h3>
+
+                        <p>
+                            Honoring and caring for parents and elders.
+                        </p>
+
+                        <button
+                            class="toggle-btn"
+                            type="button"
+                            onclick="toggleDetails('xiao-details')"
+                        >
+                            Show how this relates to Ren
+                        </button>
+
+                        <p id="xiao-details" class="details">
+                            Ren gives Xiao its heart by encouraging people to
+                            care for elders out of genuine gratitude rather
+                            than obligation.
+                        </p>
+                    </article>
+
+                    <article class="virtue-card">
+                        <h3>Yi: Righteousness</h3>
+
+                        <p>
+                            Choosing to do what is morally right.
+                        </p>
+
+                        <button
+                            class="toggle-btn"
+                            type="button"
+                            onclick="toggleDetails('yi-details')"
+                        >
+                            Show how this relates to Ren
+                        </button>
+
+                        <p id="yi-details" class="details">
+                            With Ren, Yi means choosing the right action because
+                            it benefits others, rather than simply following
+                            rules.
+                        </p>
+                    </article>
+
+                    <article class="virtue-card">
+                        <h3>Shu: Empathy and Reciprocity</h3>
+
+                        <p>
+                            Putting yourself in another person's place.
+                        </p>
+
+                        <button
+                            class="toggle-btn"
+                            type="button"
+                            onclick="toggleDetails('shu-details')"
+                        >
+                            Show how this relates to Ren
+                        </button>
+
+                        <p id="shu-details" class="details">
+                            Shu is Ren in action. It encourages a person to ask,
+                            “How would this affect someone else?” before acting.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="apply" class="scroll-section">
+            <div class="scroll-inner">
+
+                <h2>Living Out Ren in Daily Life</h2>
+
+                <ul>
+                    <li>Helping someone carry heavy groceries.</li>
+                    <li>Holding the door for the person behind you.</li>
+                    <li>Giving a genuine compliment.</li>
+                    <li>Checking in on a stressed friend or coworker.</li>
+                    <li>Listening without interrupting.</li>
+                    <li>Letting someone with fewer items go ahead in line.</li>
+                    <li>Encouraging someone learning something new.</li>
+                    <li>Donating clothing, food, money, or time.</li>
+                    <li>Being patient with customer service workers.</li>
+                    <li>Apologizing sincerely after hurting someone.</li>
+                    <li>Choosing kind words during disagreements.</li>
+                    <li>Helping and listening to older family members.</li>
+                    <li>Sharing knowledge with classmates or coworkers.</li>
+                    <li>Standing up for someone treated unfairly.</li>
+                    <li>Expressing gratitude.</li>
+                    <li>Considering another person's feelings before reacting.</li>
+                    <li>Being honest and fair in daily decisions.</li>
+                    <li>Offering a seat to someone who may need it.</li>
+                    <li>Listening without judging or immediately giving advice.</li>
+                    <li>Responding gently when someone makes a mistake.</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="references" class="scroll-section">
+            <div class="scroll-inner">
+
+                <h2>References</h2>
+
+                <ul class="reference-list">
+
+                    <li>
+                        Csikszentmihalyi, Mark. “Confucius.”
+                        <em>Stanford Encyclopedia of Philosophy</em>,
+                        March 31, 2020.
+                        <a
+                            href="https://plato.stanford.edu/entries/confucius/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View source
+                        </a>
+                    </li>
+
+                    <li>
+                        Joseph, Robert, and C. Wahing.
+                        “Confucius on the Five Constant Virtues.” 2021.
+                    </li>
+
+                    <li>
+                        Mark, Joshua. “Confucianism.”
+                        <em>World History Encyclopedia</em>,
+                        July 7, 2020.
+                        <a
+                            href="https://www.worldhistory.org/Confucianism/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View source
+                        </a>
+                    </li>
+
+                    <li>
+                        Richey, Jeff. “Confucius.”
+                        <em>Internet Encyclopedia of Philosophy</em>.
+                        <a
+                            href="https://iep.utm.edu/confucius/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View source
+                        </a>
+                    </li>
+
+                    <li>
+                        Stefon, Matt. “Ren: Chinese Philosophy.”
+                        <em>Encyclopædia Britannica</em>, 2019.
+                        <a
+                            href="https://www.britannica.com/topic/ren"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View source
+                        </a>
+                    </li>
+
+                    <li>
+                        Confucius. <em>The Analects</em>. Translated by
+                        Arthur Waley, Vintage Books, 1989. Original work
+                        published approximately 475–221 BCE.
+                    </li>
+
+                    <li>
+                        Quote from Book 15, Passage 23:
+                        “Do not do to others what you would not want done to
+                        yourself.”
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="quiz" class="scroll-section">
+            <div class="scroll-inner">
+
+                <h2>Quick Quiz</h2>
+
+                <div class="quiz-question">
+                    <p>
+                        <strong>
+                            1. Which virtue is the central guiding principle
+                            in Confucian ethics?
+                        </strong>
+                    </p>
+
+                    <label>
+                        <input type="radio" name="q1" value="li">
+                        Li: Proper Conduct
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q1" value="ren">
+                        Ren: Humaneness
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q1" value="xiao">
+                        Xiao: Filial Piety
+                    </label>
+
+                    <p id="feedback-q1" class="quiz-feedback"></p>
+                </div>
+
+                <div class="quiz-question">
+                    <p>
+                        <strong>
+                            2. Which choice is the best example of living out
+                            Ren in daily life?
+                        </strong>
+                    </p>
+
+                    <label>
+                        <input type="radio" name="q2" value="homework">
+                        Ignoring a friend's message because you are busy.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q2" value="grocery">
+                        Helping someone carry heavy groceries.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q2" value="win-argument">
+                        Trying to win an argument even if it hurts someone.
+                    </label>
+
+                    <p id="feedback-q2" class="quiz-feedback"></p>
+                </div>
+
+                <div class="quiz-question">
+                    <p>
+                        <strong>
+                            3. Which virtue is most closely connected to
+                            empathy and putting yourself in another person's
+                            place?
+                        </strong>
+                    </p>
+
+                    <label>
+                        <input type="radio" name="q3" value="li">
+                        Li: Proper Conduct
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q3" value="shu">
+                        Shu: Empathy and Reciprocity
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q3" value="yi">
+                        Yi: Righteousness
+                    </label>
+
+                    <p id="feedback-q3" class="quiz-feedback"></p>
+                </div>
+
+                <button type="button" onclick="checkQuiz()">
+                    Check Answers
+                </button>
+
+            </div>
+        </section>
+
+        <div id="quiz-celebration" aria-hidden="true">
+            <div class="celebration-content">
+
+                <img
+                    src="img.jpeg/img2.jpg"
+                    alt="Yin and Yang symbol"
+                    class="celebration-image"
+                >
+
+                <h2>Congratulations!</h2>
+
+                <p>You answered all three questions correctly.</p>
+
+                <button id="close-celebration" type="button">
+                    Close
+                </button>
+
+            </div>
+        </div>
+
+        <div id="quiz-try-again" aria-hidden="true">
+            <div class="try-again-content">
+
+                <p>
+                    Nice effort! Try again to answer all three questions
+                    correctly.
+                </p>
+
+                <button id="close-try-again" type="button">
+                    Okay
+                </button>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            Module 04 Written Assignment: Key Concepts of Confucian Ethics
+        </p>
+    </footer>
+
+    <script src="Confucian_Ethics.js"></script>
+
+</body>
+</html>

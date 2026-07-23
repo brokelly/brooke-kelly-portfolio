@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog and Discussions | The Fiction Addiction</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog and Discussions</a></li>
+            <li><a href="lists.html">Top Fiction Lists</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+
+        <h1 class="whimsical-text">Blog and Discussions</h1>
+
+        <div class="container">
+
+            <h2>Share Your Thoughts</h2>
+
+            <label for="blogTitle">Title</label>
+            <input
+                type="text"
+                id="blogTitle"
+                placeholder="Enter your blog title">
+
+            <label for="blogAuthor">Username</label>
+            <input
+                type="text"
+                id="blogAuthor"
+                placeholder="Enter your username">
+
+            <label for="blogContent">
+                Drop some thoughts like they're hot!
+            </label>
+
+            <textarea
+                id="blogContent"
+                rows="6"
+                placeholder="Write your blog post here..."></textarea>
+
+            <button
+                class="open-btn"
+                onclick="submitBlogPost()">
+                Submit Blog Post
+            </button>
+
+            <h2>Preview</h2>
+
+            <div id="blogDisplay">
+                Your blog post will appear here.
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="foot">
+        <strong>The Fiction Addiction</strong><br>
+        www.thefictionaddiction.com<br>
+        (612) 867-5309<br>
+        Eagan, MN 55123
+    </footer>
+
+    <script src="js/project6.js"></script>
+
+</body>
+</html>

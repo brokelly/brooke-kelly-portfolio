@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BG3 Favorite Builds</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+
+  <section class="banner">
+    <img src="banner.png" alt="Baldur's Gate 3 fantasy banner">
+  </section>
+
+  <header class="topbar">
+    <div class="logo-wrap">
+      <img class="logo" src="logo.jpeg" alt="BG3 Builds Logo">
+      <div class="logo-text">
+        <h2>BG3 Builds</h2>
+        <p>Home Base for Your Next Run</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="active" href="index.html">Home</a>
+      <a href="builds.html">Builds</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="home-grid">
+
+      <section class="panel home-welcome">
+        <h3>Welcome</h3>
+        <p>
+          Welcome to my Baldur’s Gate 3 builds hub. This site was created to organize some of the strongest
+          and most chaotic character builds in the game. Whether you want raw burst damage, heavy frontline
+          defense, or stealthy tactics, you’ll find ideas here to inspire your next run.
+        </p>
+      </section>
+
+      <section class="panel home-favorites-preview">
+        <h3 class="section-title">Favorite Builds Preview</h3>
+        <p>Your saved favorites appear here as flip cards.</p>
+        <div class="home-favorites-grid" id="homeFavoritesGrid"></div>
+      </section>
+
+      <section class="panel home-featured">
+        <h3 class="section-title">Featured Builds</h3>
+
+        <div class="cards">
+
+          <article class="preview-card flip-card">
+            <div class="flip-inner">
+              <div class="flip-face flip-front">
+                <div class="tier-badge s">S-Tier</div>
+                <h4>Sorlock ★</h4>
+                <p class="card-copy">
+                  A Sorcerer/Warlock multiclass that mixes Eldritch Blast pressure with burst turns.
+                </p>
+                <div class="tags">
+                  <span>#burst</span>
+                  <span>#eldritch</span>
+                  <span>#control</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn explore-btn" type="button">Explore Build</button>
+                  <button class="btn fav-build-btn" type="button" data-fav="Sorlock ★">Favorite</button>
+                </div>
+              </div>
+
+              <div class="flip-face flip-back">
+                <h4>Sorlock ★</h4>
+                <p class="card-copy">
+                  Big charisma, rapid-fire spell pressure, and a deeply disrespectful relationship with action economy.
+                </p>
+                <div class="back-actions">
+                  <button class="btn back-btn" type="button">Back</button>
+                  <a class="btn" href="builds.html">Go to Builds</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="preview-card flip-card">
+            <div class="flip-inner">
+              <div class="flip-face flip-front">
+                <div class="tier-badge s">S-Tier</div>
+                <h4>Paladin Tank</h4>
+                <p class="card-copy">
+                  Durable front-line defender with healing support, protective auras, and smite moments.
+                </p>
+                <div class="tags">
+                  <span>#tank</span>
+                  <span>#support</span>
+                  <span>#smite</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn explore-btn" type="button">Explore Build</button>
+                  <button class="btn fav-build-btn" type="button" data-fav="Paladin Tank">Favorite</button>
+                </div>
+              </div>
+
+              <div class="flip-face flip-back">
+                <h4>Paladin Tank</h4>
+                <p class="card-copy">
+                  Heavy armor, healing, smites, and enough front-line stubbornness to become a very decorative wall.
+                </p>
+                <div class="back-actions">
+                  <button class="btn back-btn" type="button">Back</button>
+                  <a class="btn" href="builds.html">Go to Builds</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="preview-card flip-card">
+            <div class="flip-inner">
+              <div class="flip-face flip-front">
+                <div class="tier-badge s">S-Tier</div>
+                <h4>Gloomstalker Assassin</h4>
+                <p class="card-copy">
+                  A stealth opener build designed to delete threats before they can react.
+                </p>
+                <div class="tags">
+                  <span>#stealth</span>
+                  <span>#crit</span>
+                  <span>#alpha</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn explore-btn" type="button">Explore Build</button>
+                  <button class="btn fav-build-btn" type="button" data-fav="Gloomstalker Assassin">Favorite</button>
+                </div>
+              </div>
+
+              <div class="flip-face flip-back">
+                <h4>Gloomstalker Assassin</h4>
+                <p class="card-copy">
+                  Starts fights like a tax audit dropped from the ceiling. Efficient, rude, and extremely committed.
+                </p>
+                <div class="back-actions">
+                  <button class="btn back-btn" type="button">Back</button>
+                  <a class="btn" href="builds.html">Go to Builds</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="panel home-find">
+        <h3>What You’ll Find Here</h3>
+        <p>
+          A tiered build library you can filter by role and tier, flip cards that show how to build each character,
+          and a Favorites section that saves your top picks.
+        </p>
+
+        <a class="btn" href="builds.html">Go to Builds</a>
+      </section>
+
+      <section class="panel home-quick-panel">
+        <h3>Quick Favorites Panel</h3>
+        <p>
+          Open the panel to view shortcut links and a mini summary of your saved favorites.
+        </p>
+        <button class="btn" id="openInfoPanel" type="button">Open Favorites Panel</button>
+      </section>
+
+      <section class="panel home-tiers">
+        <h3 class="section-title">What the Tiers Mean</h3>
+        <p>
+          The tier labels are a quick way to sort builds by overall power, consistency, and how often they make combat feel slightly unfair.
+        </p>
+
+        <div class="tier-explainer-grid">
+          <article class="tier-card s-tier">
+            <h4>S-Tier</h4>
+            <p>
+              The strongest and most reliable builds on the site. These are the “why does this feel illegal?” options.
+              Great damage, great utility, or both.
+            </p>
+          </article>
+
+          <article class="tier-card a-tier">
+            <h4>A-Tier</h4>
+            <p>
+              Very strong builds that still perform great, just with a little less nonsense than S-Tier.
+              Still excellent, still scary, still absolutely worth using.
+            </p>
+          </article>
+
+          <article class="tier-card b-tier">
+            <h4>B-Tier</h4>
+            <p>
+              Fun and solid builds that may be more situational, more chaotic, or just less optimized.
+              They still work, they just bring a little more drama per result.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel home-roles">
+        <h3 class="section-title">Build Roles Grid</h3>
+        <p>This grid highlights four different playstyle categories across the site.</p>
+
+        <div class="role-grid">
+          <article class="role-card">
+            <h4>DPS</h4>
+            <p>High-damage builds for burst turns, critical hits, and enemy deletion.</p>
+          </article>
+
+          <article class="role-card">
+            <h4>Tank</h4>
+            <p>Frontline builds that soak damage, protect teammates, and stay standing.</p>
+          </article>
+
+          <article class="role-card">
+            <h4>Support</h4>
+            <p>Healing, buffs, utility, and party-saving energy when everything goes sideways.</p>
+          </article>
+
+          <article class="role-card">
+            <h4>Control</h4>
+            <p>Spell-heavy or tactical builds that shape the battlefield and lock enemies down.</p>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <aside class="info-panel" id="infoPanel">
+    <div class="info-panel-header">
+      <h3>Favorites Panel</h3>
+      <button class="btn panel-close-btn" id="closeInfoPanel" type="button">Close</button>
+    </div>
+
+    <p>This panel gives quick navigation and a mini summary of your saved favorites.</p>
+
+    <div class="panel-links">
+      <a class="btn" href="builds.html#favoritesSection">Go to Favorites</a>
+      <a class="btn" href="builds.html#buildsSection">Go to Build Library</a>
+      <a class="btn" href="about.html">About This Project</a>
+    </div>
+
+    <h4>Saved Favorites</h4>
+    <div id="panelFavoritesList" class="panel-favorites-list"></div>
+  </aside>
+
+  <div class="panel-overlay" id="panelOverlay"></div>
+
+  <footer class="footer">
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="builds.html">Builds</a>
+      <a href="about.html">About</a>
+    </nav>
+    <p class="copyright">&copy; 2026 Brooke Kelly</p>
+  </footer>
+
+</body>
+</html>
