@@ -13,17 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const navigationLinks =
         document.querySelectorAll(".nav-links a");
 
-    /*
-        Add the current year to the footer.
-    */
     if (currentYear) {
         currentYear.textContent =
             new Date().getFullYear();
     }
 
-    /*
-        Open and close the mobile navigation menu.
-    */
     if (menuButton && navLinks) {
         menuButton.addEventListener(
             "click",
@@ -42,9 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
-    /*
-        Close the mobile menu after selecting a link.
-    */
     navigationLinks.forEach(function (link) {
         link.addEventListener("click", function () {
             if (navLinks) {
