@@ -44,7 +44,6 @@ button {
 }
 
 /* Navigation */
-
 .site-header {
     background-color: rgba(255, 255, 255, 0.98);
     border-bottom: 1px solid var(--light-gray);
@@ -107,7 +106,6 @@ button {
 }
 
 /* Hero */
-
 .hero {
     background:
         radial-gradient(
@@ -216,7 +214,6 @@ button {
 }
 
 /* Projects */
-
 .projects-section {
     padding: 100px 24px;
 }
@@ -453,7 +450,6 @@ button {
 }
 
 /* Contact */
-
 .contact-section {
     background-color: var(--dark-navy);
     color: var(--white);
@@ -493,7 +489,6 @@ button {
 }
 
 /* Footer */
-
 .site-footer {
     align-items: center;
     background-color: #04111e;
@@ -510,7 +505,6 @@ button {
 }
 
 /* Responsive */
-
 @media (max-width: 900px) {
     .project-card {
         grid-template-columns: 1fr;
